@@ -1,0 +1,50 @@
+<h1>MY PARK MARKET エントリーフォーム</h1>
+<p>TOKOROZAWA / MY PARK MARKETは</p>
+<p>住み続けられるまちづくり（ＳＤＧsの実践）をテーマに循環型社会や情報交換の場となる活動を目的とする</p>
+<p>フリーマーケット併設型マルシェです。</p>
+
+<div id="formWrapper">
+
+	<form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdh4Fo26czzeXh3x4Q03sWpak_RCgT5xWYe6qdDGom9VKS0Vw/formResponse" method="post" name="myForm" target="dummyIframe">
+		<div>
+			<label>氏名</label>
+			<br>
+			<input type="text" name="entry.609260332" placeholder="山田 太郎" required/>
+		</div>
+
+		<div>
+			<label>メールアドレス</label>
+			<br>
+			<input type="mail" name="entry.1677018168" placeholder="mail@example.com" required/>
+		</div>
+
+		<div>
+			<label>備考・質問</label>
+			<br>
+			<textarea name="entry.2025976849" rows="4" cols="40" required> ここに感想を記入してください。 </textarea>
+		</div>
+
+		<input class="btn btn-success" type="button" value="送信" onclick="submitForm()"/>
+		<!--
+			<button type="submit">送信</button>
+		-->
+	</form>
+
+	<iframe name="dummyIframe" style="display:none;"></iframe>
+</div>
+
+<div id="thxMessage"  style="display: none;"><p>お問い合わせありがとうございます。</p></div>
+
+
+
+<script>
+	function submitForm(){
+		document.myForm.submit();
+		document.getElementById('formWrapper').style.display  = 'none';
+		document.getElementById('thxMessage').style.display   = 'block';
+	}
+</script>
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
